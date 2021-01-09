@@ -1,0 +1,27 @@
+@import "./Helper/mixin";
+.Movie-hinhAnh{
+    padding: 0 34px;
+    position: relative;
+    img{
+        height: 379px;
+    }
+}
+
+.Movie-Content{
+    .Moive-trailer{
+        position: absolute;
+        position: absolute;
+        top: 97px;
+        margin-left: 3px;
+        opacity: 0;
+        
+    }
+    :hover{
+        opacity: 1;
+    }
+    border: 1px white solid;
+    border-radius: 6px;
+    h4{
+        text-align: center;
+    }
+}

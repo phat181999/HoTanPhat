@@ -1,0 +1,138 @@
+.cinema{
+    padding: 25px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row-seat {
+    margin-bottom: 8px;
+    .row-name {
+      display: inline-block;
+      width: 29px;
+      height: 29px;
+      margin-right: 8px;
+    }
+    .seat {
+      display: inline-block;
+      width: 25px;
+      height: 14px;
+      line-height: 25px;
+      border-radius: 4px;
+      font-size: 10px;
+      text-align: center;
+      margin-right: 10px;
+      background-color: #3e515d;
+      font-size: 10px;
+      cursor: pointer;
+      span {
+        visibility: hidden;
+      }
+      &.choosing {
+        span {
+          visibility: visible;
+        }
+      }
+    }
+    .choosing {
+        background-color: green;
+    }
+    .cantchoose {
+      background-color: rgba(16, 34, 53, 0.2);
+      cursor: default;
+    }
+    .vip {
+      background-color: #f7b500;
+    }
+    .chosen {
+      position: relative;
+      background-color: rgba(16, 34, 53, 0.2);
+      cursor: default;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 48%;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 48%;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+      }
+    }
+    .null {
+      background-color: transparent;
+      width: 15px;
+    }
+  }
+  .seat-checkout__wrap{
+      text-align: center;
+  }
+  .wrap{
+      text-align: center;
+  }
+  .seat-chose{
+    padding-top: 18px;
+    .typeseat{
+        padding: 22px;
+    }
+  }
+  .ticket-info{
+      .total-cost{
+        border-bottom: 1px dashed #e9e9e9;
+        font-size: 36px;
+        font-family: "SF Medium";
+        color: #44c020 !important;
+        padding: 12px 0;
+      }
+      .movie-info{
+        padding: 12px 0;
+        border-bottom: 1px dashed #e9e9e9;
+      }
+      .seat{
+        padding: 12px 0;
+        border-bottom: 1px dashed #e9e9e9;
+        color: #fb4226;
+        display: flex;
+        justify-content: space-between;
+      }
+      .user-info{
+        padding: 12px 0;
+        border-bottom: 1px dashed #e9e9e9;
+      }
+      .method-pay{
+        padding: 12px 0;
+        border-bottom: 1px dashed #e9e9e9;
+      }
+      .ticket__bottom{
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+      .buy-ticket{
+        background-color: #afafaf;
+        background-image: none;
+        cursor: auto;
+        button{
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 24px;
+            width: 100%;
+            height: 80px;
+            border-radius: 0;
+        }
+      }
+  }

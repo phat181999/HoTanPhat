@@ -1,0 +1,97 @@
+@import "./Helper/mixin";
+.Detail-main{
+        position: relative;
+        overflow: hidden;
+        .Img-background{
+            position: relative;
+            height: 112px;
+            .ImgBg{
+            position: absolute;
+            width: 100%;
+              top: 50%;
+              left: 0;
+            -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+              
+            }
+        }
+        
+        .Detail-content{
+            .detail-movie__poster{ 
+                .Detail-NameMovie{
+                    color: red;
+                    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+                     -1px 1px 0 #fff, 1px 1px 0 #fff;
+                }
+                .Detail-Extra{
+                    margin: 20px 0;
+                }
+                span{
+                    color: white;
+                    font-weight: 700;
+                }
+                img{
+                    border: 1px white solid;
+                    border-radius: 30px;
+                    background-color: ghostwhite;
+                }
+            }
+        }
+        .comment-img{    height: 110px;} 
+        @include  responsive_320{
+            .Detail-Extra{
+                margin: 6px 0;
+            }
+            .Img-Title{
+                padding: 0px;
+                height: 63%;
+            }
+            h3{
+                font-size: 11px;
+            }
+            .Detail-NameMovie{
+                font-size: 11px;
+            }
+            span{
+                font-size: 7px;
+            }
+            .ImgBg 
+            {
+                height: 635px;
+            }
+        }
+        @include responsive_375{
+            h3{
+                font-size: 13px;
+            }
+            .Img-Title{
+                padding: 0px;
+                height: 63%;
+            }
+            span{
+                font-size: 11px;
+            }
+        }
+        @include responsive_768{
+            span{
+                font-size: 14px;
+            }
+        }
+}
+.Detail-MaHeThongRap{   
+    .Detail-imgLogo{ height: 64px;}
+} 
+.Detail-Date{
+    margin: 0 10px 10px 0;
+    padding: 2px 5px;
+    transition: all 0.2s;
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(246, 246, 246, 0.5);
+    border-radius: 7px;
+    border: 1px solid #e4e4e4;
+    &:hover{
+        background-color: limegreen;
+        color: greenyellow;
+    }
+}

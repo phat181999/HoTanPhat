@@ -1,0 +1,45 @@
+#List-Movie {
+	padding-top: 84px;
+	// background-image: url(../img/bgtrailer.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 50% 50%;
+	background-size: cover;
+	overflow: hidden;
+	padding-bottom: 50px;
+	.nav-pills {
+		justify-content: center;
+		padding-bottom: 25px;
+		.nav-item {
+			margin: 0 15px;
+			a {
+				color: white;
+			}
+		}
+		.nav-link {
+			font-size: 20px;
+			border-bottom: #d4dd29;
+		}
+		.active {
+			background-color: #218838;
+		}
+		.tab-pane {
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.Soon{
+		img{
+			width: 300px;
+    padding: 0 14px;
+		}
+	}
+	.List-Movie-BG{
+		background-image: url(../img/back-news.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		padding-top: 120px;
+	}
+}

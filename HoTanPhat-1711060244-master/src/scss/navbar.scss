@@ -1,0 +1,104 @@
+@import "./Helper/mixin";
+#Header {
+	.navbar {
+		background-color: #202020;
+		height: 82px;
+	}
+	.Header-left {
+		padding-left: 536px;
+		.nav-item {
+			a {
+				color: white;
+				&:hover {
+					color: #218838;
+				}
+			}
+		}
+	}
+	.Logo-Cinema{
+		border: 4px #202020 solid;
+		background-color: brown;
+		border-radius: 1px;
+	}
+	.Header-right {
+		span {
+			color: white;
+			// padding-left: 5px;
+			font-size: 17px;
+		}
+		.icon {
+			font-size: 35px;
+		}
+	}
+	.login {
+		.icon {
+			font-size: 40px;
+		}
+		margin-left: 323px;
+		span {
+			color: white;
+		}
+	}
+	// @media only screen and(max-width:1024px) {
+	// 	.Header-left {
+	// 		padding-left: 122px;
+	// 	}
+	// 	.navbar {
+	// 		justify-content: center;
+	// 	}
+	// }
+	@include  responsive_320{
+		ul{
+			display: contents;
+			li{
+				font-size: 12px;
+			}
+		}
+		nav .login{
+			font-size: 10px;
+			margin-left: 0px;
+			padding-left: 5px;
+		}
+	}
+	@include responsive_375{
+		ul{
+			display: contents;
+			li{
+				font-size: 16px;
+			}
+		}
+		nav .login{
+			font-size: 8px;
+			margin-left: 0px;
+			padding-left: 5px;
+		}
+	}
+	@include responsive_425{
+		ul li{
+			font-size: 16px;
+		}
+	}
+	@include responsive_768{
+		ul li{
+			margin-right: 90px;
+		}
+		.Header-left{
+			padding: 0px 0px;
+		}
+		.login{
+			margin: 0px auto;
+		}
+	}
+	// @include responsive_1024{
+	// 	.Header-left{
+	// 		padding: 0px 81px;
+	// 	}
+	// }
+}
+.user{
+	border: 1px white solid;
+	border-radius: 6px;
+	a{
+		text-decoration: none;
+	}
+}

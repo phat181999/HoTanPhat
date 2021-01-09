@@ -1,0 +1,51 @@
+@import "./Helper/mixin";
+.News{
+    img{width: 100%;}
+    span{
+        text-align: justify;
+        color: #4a4a4a;
+        font-family: "SF Regular";
+        padding: 0 5px 0 0;
+        line-height: 19px;
+    }
+        p{
+            color: black;
+            font-size: 16px;
+            height: 42px;
+            line-height: 20px;
+            font-weight: 700;
+            &:hover{
+                color: red;
+                
+            }
+        }
+        .News-2{
+            margin: 19px;
+        }
+    .News-Footer{
+        background-image: url(../img/back-news.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		padding-top: 120px;
+    }
+    @include  responsive_320{
+         p{
+            font-size: 12px;
+        }
+        span{
+            font-size: 10px;
+        }
+    }
+    @include responsive_375{
+        p{
+            font-size: 12px;
+        }
+    }
+    @include responsive_425{
+        p{
+            font-size: 10px;
+        }
+    }
+    
+}

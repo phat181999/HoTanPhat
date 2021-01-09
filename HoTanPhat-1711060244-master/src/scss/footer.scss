@@ -1,0 +1,44 @@
+#Footer {
+	background-image: url(../img/bgft.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 50% 50%;
+	background-size: cover;
+	overflow: hidden;
+	ul li {
+		list-style: none;
+	}
+	h3 {
+		color: white;
+		font-size: 16px;
+		font-weight: 500;
+		text-align: center;
+		padding-right: 270px;
+	}
+	a {
+		color: #c3cc26;
+		font-size: 14px;
+		line-height: 22px;
+		&:hover {
+			color: white;
+		}
+	}
+	.Title-Ft {
+		padding-top: 75px;
+	}
+	@media only screen and(max-width:1024px) {
+		h3 {
+			padding-right: 192px;
+		}
+	}
+	@media only screen and(max-width:900px) {
+		h3 {
+			padding-right: 157px;
+		}
+	}
+	@media only screen and(max-width:680px) {
+		h3 {
+			padding-left: 40px;
+		}
+	}
+}

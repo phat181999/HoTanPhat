@@ -1,0 +1,58 @@
+.Step-buy1-left {
+	p {
+		color: black;
+	}
+	.Buy1-title {
+		text-align: center;
+		padding-top: 150px;
+		font-size: 21px;
+		font-weight: 400;
+	}
+}
+.Step-buy1-right {
+	span {
+		color: white;
+	}
+	p {
+		color: white;
+	}
+	padding-top: 80px;
+	background-image: url(../../../img/bgtrailer.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 50% 50%;
+	background-size: cover;
+	overflow: hidden;
+	.tickets {
+		text-align: center;
+	}
+	.chosen-ticket {
+		padding-top: 62px;
+		.total-cost {
+			padding-left: 269px;
+		}
+		.chosen-button {
+			color: white;
+			button {
+				border-radius: 7px;
+				margin-right: 381px;
+			}
+		}
+	}
+	.contact {
+		text-align: center;
+	}
+	@media only screen and(max-width:680px) {
+		.cinema {
+			justify-content: center;
+		}
+		.ticket__type {
+			padding-right: 117px;
+		}
+	}
+	@media only screen and(max-width:900px) {
+		.ticket__type {
+			padding-right: 13px;
+		}
+	}
+}
