@@ -104,7 +104,8 @@ const checklogin=()=>{
           style={{
             background: `url(${props.chosenMovie.thongTinPhim.hinhAnh}) no-repeat center`,
             backgroundSize: "cover",
-            height:"638px"
+            height:"587px",
+            width:"100%"
           }}
         >
           <div className="Buy1-title">
@@ -121,7 +122,7 @@ const checklogin=()=>{
           </div>
         </div>
         
-        <div className="Step-buy1-right col-12 col-md-9">
+        <div className="Step-buy1-right col-9 col-md-9">
           <div className="cinema">
             <div className="cinema__logo"></div>
             <div className="cinema__info">

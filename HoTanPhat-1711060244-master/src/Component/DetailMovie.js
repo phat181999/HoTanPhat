@@ -8,11 +8,19 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import TabContainer from 'react-bootstrap/TabContainer';
 
-let divTrailer={
+let divTrailer = {
 	height: '240px',
-    width: '580px'
+	width: '580px',
+	marginLeft: "14px"
 }
-
+const Trailer = { 
+	marginLeft: "14px"
+}
+let divStyleImg={
+	height: '207px',
+	width: '85%',
+	
+}
 let divContent = {
 	justifyContent: 'center'
 }
@@ -20,9 +28,9 @@ const divName = {
 	// color: 'white',
 	textAlign: 'center'
 }
-// const divlichChieu = {
-// 	color: 'white'
-// }
+let ActorFilm={
+	marginTop: "41px"
+}
 
 class DetailMovie extends Component {
 	componentDidMount() {
@@ -64,14 +72,38 @@ class DetailMovie extends Component {
 		const { movie } = this.props;
 		const settings = {
 			dots: true,
-			infinite: true,
-			slidesToShow: 3,
+			infinite: false,
+			speed: 500,
+			slidesToShow: 4,
 			slidesToScroll: 1,
-			autoplay: false,
-			speed: 2000,
-			autoplaySpeed: 2000,
-			cssEase: "linear"
-		  };
+			initialSlide: 0,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2,
+						initialSlide: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+		};
 		return (
 			<div>
 				<section id="Detail-Movie">
@@ -104,7 +136,7 @@ class DetailMovie extends Component {
 					{/* slick actor  */}
 					{/* slick actor  */}
 					<div className='Show-Day'>
-						<div className=" container">
+						<div className="container">
 							<TabContainer>
 								<Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="container" style={divContent}>
 									<Tab eventKey="profile" title="Thông Tin">
@@ -167,20 +199,21 @@ class DetailMovie extends Component {
 												<p className="content info-full">{movie.moTa}</p>
 											</div>
 										</div>
-													{/* TITLE  */}
-									
+										{/* TITLE  */}
 										<div className="row m-0">
-											<div className="col-sm-6 p-0">
-												<div >
-												<Slider {...settings}>
-													<div className="Detail-actor">
-														<img src="../img/dv1.jpg"/>
-													</div>
-												</Slider>
-												</div>
+											<div className="col-sm-6 p-0 " style={ActorFilm}>												
+													<Slider {...settings}>													
+															<img src="../img/dv01.jpg" />
+															<img src="../img/dv8.jpg"  style={divStyleImg}/>
+															<img src="../img/dv2.jpg" />
+															<img src="../img/dv9.jpg" />
+															<img src="../img/dv10.jpg" />
+															<img src="../img/dv11.jpg" />	
+															<img src="../img/dv12.jpg" />												
+													</Slider>												
 											</div>
-											<div className="col-sm-6">
-												<p className="title">Trailer</p>
+											<div className="col-sm-6 p-0">
+												<p className="title" style={Trailer}>Trailer</p>
 												<iframe allowFullScreen src={movie.trailer} style={divTrailer}></iframe>
 											</div>
 										</div>

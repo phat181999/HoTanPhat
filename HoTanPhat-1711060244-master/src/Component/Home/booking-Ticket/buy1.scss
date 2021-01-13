@@ -1,3 +1,4 @@
+@import "./Helper/mixin";
 .Step-buy1-left {
 	p {
 		color: black;
@@ -8,6 +9,7 @@
 		font-size: 21px;
 		font-weight: 400;
 	}
+	
 }
 .Step-buy1-right {
 	span {
@@ -53,6 +55,49 @@
 	@media only screen and(max-width:900px) {
 		.ticket__type {
 			padding-right: 13px;
+		}
+	}
+	//
+	@include  responsive_320{	
+			.tickets{
+				display: flex;
+			}	
+
+			.cinema__time{
+				text-align: center;
+			}
+			.tickets{
+				justify-content: center;
+			}
+			.ticket {
+				justify-content: center;
+			}
+			.ticket__num{
+				font-size: 11px;
+			}
+			.chosen-ticket .total-cost{
+				padding-left: 70px;
+				// font-size: 14px;
+
+			}
+	}
+	@include responsive_375{
+		.tickets{
+			display: flex;
+		}	
+		.ticket__num{
+			font-size: 14px;
+		}
+		.tickets{
+			justify-content: center;
+		}
+		.ticket {
+			justify-content: center;
+		}
+		.chosen-ticket .total-cost{
+			padding-left: 70px;
+			// font-size: 14px;
+
 		}
 	}
 }

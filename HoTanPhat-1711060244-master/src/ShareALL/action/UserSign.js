@@ -27,7 +27,7 @@ export const signUpAPI = (user) => {
 			.catch((err) => {
 				Swal.fire({
 					icon: 'error',
-					title: 'Sai tài khoản hoặc mật khẩu!',
+					title: 'Có thể bạn chưa nhập thông tin!',
 					text: 'Hãy thử lại ngay',
 					width: '400px',
 					padding: '0 0 20px 0'

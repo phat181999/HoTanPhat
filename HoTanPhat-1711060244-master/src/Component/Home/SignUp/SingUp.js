@@ -2,24 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import * as UserSign from '../../../ShareALL/action/UserSign';
-import * as yup from "yup";
 
-const signupUserSchema = yup.object().shape({
-    taiKhoan: yup.string().required("* Field is required!"),
-    matKhau: yup.string().required("* Field is required!"),
-    hoTen: yup.string().required("* Field is required!"),
-    soDt: yup
-      .string()
-      .required("*Field is required!")
-      .matches(
-        /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
-        "* Phone number is invalid!"
-      ),
-    email: yup
-      .string()
-      .required("*Field is required!")
-      .email("* Email is invalid!")
-  });
+
 
 const divStyle ={
 	color: 'white'
